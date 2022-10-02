@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            text-align: center;
+            padding: 150px;
+        }
+        button{
+            background-color: blue;
+            color: greenyellow;
+            padding: auto;
+            border: 3px;
+            width: 100px;
+            height: 75px;
+            cursor: pointer;
+
+        }
+        #counder{
+            font-size: 75px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="counder">
+            0
+        </div>
+        <div class="buttons">
+            <button id="inc"> incremet</button>
+            <button id="res">reset</button>
+            <button id="dec">decrement</button>
+
+        </div>
+    </main>
+    <script>
+        const counder=document.getElementById('counder')
+        const incremetBtn=document.getElementById("inc")
+        const resetBtn=document.getElementById("res")
+        const decrementBtn=document.getElementById("dec")
+
+        coundervalue=0
+
+        incremetBtn.addEventListener("click", function(event){
+            coundervalue += 1
+            counder.innerHTML = coundervalue
+
+        })
+
+        decrementBtn.addEventListener("click", function(event){
+            coundervalue -=1
+            counder.innerHTML = coundervalue
+        })
+
+        resetBtn.addEventListener("click", function(event){
+            coundervalue =0
+            counder.innerHTML =coundervalue
+        })
+
+
+    </script>
+</body>
+</html>
